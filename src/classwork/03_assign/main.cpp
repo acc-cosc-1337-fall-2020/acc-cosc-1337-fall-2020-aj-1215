@@ -8,7 +8,7 @@ using std::cin;
 
 int main() 
 {
-	char letter_grade;
+	std::string letter_grade;
 	int grade;
 	cout<<"Enter numerical grade: ";
 	cin>>grade;
@@ -16,7 +16,6 @@ int main()
 	{
 		get_letter_grade_using_if(grade);
 		get_letter_grade_using_switch(grade);
-		return letter_grade;
 	}
 	else
 	{

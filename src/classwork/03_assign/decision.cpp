@@ -2,59 +2,65 @@
 #include "decision.h"
 
 
-int get_letter_grade_using_if(int grade)
+std::string get_letter_grade_using_if(int grade)
 {
-    char letter_grade;
+    std::string letter_grade;
 
     if (grade < 0 || grade > 100)
     {
-        letter_grade = 'Invalid input. Enter grade 0-100.';
+        letter_grade = "Invalid input. Enter grade 0-100.";
     }
     else if (grade < 60)
     {
-        letter_grade = 'E';
+        letter_grade = "F";
     }
     else if (grade < 70)
     {
-        letter_grade = 'D';
+        letter_grade = "D";
     }
     else if (grade < 80)
     {
-        letter_grade = 'C';
+        letter_grade = "C";
     }
     else if (grade < 90)
     {
-        letter_grade = 'B';
+        letter_grade = "B";
     }
     else if (grade <= 100)
     {
-        letter_grade = 'A';
+        letter_grade = "A";
     }
     return letter_grade;
 }
 
-int get_letter_grade_using_switch(int grade)
+std::string get_letter_grade_using_switch(int grade)
 {
-    char letter_grade;
-    switch(grade)
+    std::string letter_grade;
+    switch(grade/10)
     {
-        case 1: grade < 60;
-            letter_grade = 'E';
+        case 0:
+        case 1: 
+        case 2: 
+        case 3: 
+        case 4: 
+        case 5: 
+            letter_grade = "F";
             break;
-        case 2: grade < 70;
-            letter_grade = 'D';
+        case 6:
+            letter_grade = "D";
             break;
-        case 3: grade < 80;
-            letter_grade = 'C';
+        case 7:
+            letter_grade = "C";
             break;
-        case 4: grade < 90;
-            letter_grade = 'B';
+        case 8:
+            letter_grade = "B";
             break;
-        case 5: grade <= 100;
-            letter_grade = 'A';
+        case 9:
+        case 10:
+            letter_grade = "A";
             break;
-        default: grade < 0 || grade > 100;
-            letter_grade = 'Invalid input. Enter grade 0-100.';
+        default: 
+            letter_grade = "Invalid input. Enter grade 0-100.";
             break;
     }
     return letter_grade;
