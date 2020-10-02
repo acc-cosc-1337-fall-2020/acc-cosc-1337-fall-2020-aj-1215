@@ -14,21 +14,15 @@ factorial.  Also, loop continues as long as user wants to.
 int main() 
 {
 	int num;
+	int fac;
 	do
 	{
 		cout<<"Enter a number between 1-10: ";
 		cin>>num;
-		int factorial(int num);
-		{
-   			int factorial = 1;
-   			int i;
-   			for (i = 1; i <= num; i++);
-   			{
-      			factorial = factorial * i;
-   			}
-}
+		fac = factorial(num);
+		cout<<"The factorial for "<< num <<" is "<< fac;
 	}while(num >= 1 && num <=10);
-	cout<<"The factorial for "<< num <<" is "<< factorial;
+	
 
 	return 0;
 }
